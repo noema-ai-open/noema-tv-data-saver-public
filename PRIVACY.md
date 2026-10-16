@@ -1,12 +1,12 @@
-# Privacy Policy / Datenschutzerklärung — Android TV Data Limiter
+# Privacy Policy — TV Data Saver: Save Money
 
-Effective date: 7 October 2026
+Last updated: 16 October 2026
 
-Android TV Data Limiter (NOEMA AI) is designed to work locally on the Android TV / Google TV device.
+TV Data Saver: Save Money is designed to work locally on the Android TV / Google TV device.
 
 ## Data collection during normal use
 
-NOEMA TV Data Limiter does not require an account and does not include advertising, analytics, automatic remote telemetry or a NOEMA-operated VPN server.
+TV Data Saver: Save Money does not require an account and does not include advertising, analytics SDKs, automatic usage analytics, automatic remote telemetry or a NOEMA-operated VPN server.
 
 During normal use, NOEMA AI does not receive browsing history, website content, app traffic contents, location, contacts, messages, photos, health information, financial information or other traffic content through the app.
 
@@ -20,7 +20,7 @@ Traffic path:
 
 The TUN and SOCKS relay run locally on the device. Traffic is not sent through a remote NOEMA VPN endpoint. The app does not change the apparent country or public IP address for advertising, tracking or monetization.
 
-The Google Play package is `ai.noema.tvspeed`, published by NOEMA AI. Earlier versions and the TV interface use the names NOEMA TV Speed Limiter or NOEMA TV Data Limiter.
+The Google Play package is `ai.noema.tvspeed`, published by NOEMA AI. Earlier releases and some existing screenshots or in-app screens may still display the names NOEMA TV Speed Limiter or Android TV Data Saver. These refer to the same app.
 
 The app does not require root access, Device Owner privileges, privileged system permissions, a modified operating system, a custom ROM, or an unlocked bootloader. It uses the standard Android VpnService API with Android's user permission dialog. It does not obtain, grant or change root privileges and does not modify Android system files or bypass Android security mechanisms.
 
@@ -30,7 +30,7 @@ VpnService is used to make the selected device-local download limit possible. Th
 
 The VPN path handles packets from other apps. IP addresses, transport ports, TCP/UDP connection state and hostnames supplied in SOCKS requests are processed to connect to the original destinations. Payload bytes are temporarily buffered in memory for forwarding and download rate limiting. The app does not decrypt TLS connections, inspect content for advertising or profiling, or create packet-capture files or a browsing-history database.
 
-This local processing can handle personal or sensitive content carried by other apps' traffic, including encrypted bytes. NOEMA AI does not receive that content. Original connections still leave the device for the internet services selected by those apps; local VPN processing is not an offline mode. There is no additional remote VPN tunnel, remote private network service or geographic VPN endpoint. The app does not add a separate layer of encryption to the original connections; encryption remains that of the originating app/protocol, such as HTTPS/TLS.
+This local processing can handle personal or sensitive content carried by other apps' traffic, including encrypted bytes. Traffic relayed from other apps may include device identifiers that those apps transmit to their own destinations. The local SOCKS relay opens outgoing sockets for this forwarded traffic. NOEMA AI does not receive that content. Original connections still leave the device for the internet services selected by those apps; local VPN processing is not an offline mode. There is no additional remote VPN tunnel, remote private network service or geographic VPN endpoint. The app does not add a separate layer of encryption to the original connections; encryption remains that of the originating app/protocol, such as HTTPS/TLS.
 
 ## DNS
 
@@ -68,7 +68,7 @@ If the user chooses **Copy report**, Android copies the displayed report to the 
 
 If no compatible email or sharing application is available, NOEMA falls back to copying the report locally rather than transmitting it automatically.
 
-If a user voluntarily sends diagnostic information to NOEMA Support, NOEMA AI receives only the information the user chose to provide. Support correspondence may be retained as reasonably necessary to answer the request, maintain support history and diagnose recurring compatibility issues, subject to applicable law.
+If a user voluntarily sends diagnostic information to NOEMA Support, NOEMA AI receives only the information the user chose to provide. This optional collection is used to answer the support request and troubleshoot app functionality. It is not used for advertising, profiling or automatic usage analytics. Support correspondence may be retained as reasonably necessary to answer the request, maintain support history and diagnose recurring compatibility issues, subject to applicable law.
 
 ## Third-party software
 
