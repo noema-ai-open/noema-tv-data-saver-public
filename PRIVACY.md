@@ -68,7 +68,7 @@ If the user chooses **Copy report**, Android copies the displayed report to the 
 
 If no compatible email or sharing application is available, NOEMA falls back to copying the report locally rather than transmitting it automatically.
 
-If a user voluntarily sends diagnostic information to NOEMA Support, NOEMA AI receives only the information the user chose to provide. This optional collection is used to answer the support request and troubleshoot app functionality. It is not used for advertising, profiling or automatic usage analytics. Support correspondence may be retained as reasonably necessary to answer the request, maintain support history and diagnose recurring compatibility issues, subject to applicable law.
+If a user voluntarily sends diagnostic information to NOEMA Support, NOEMA AI receives only the information the user chose to provide. This optional collection is used to answer the support request and diagnose and fix errors. Google Play groups diagnosing and fixing errors under the Data safety purpose 'Analytics'; that purpose describes these voluntary support reports, not an analytics SDK or automatic usage tracking. Reports are not used for advertising or profiling. Support correspondence may be retained as reasonably necessary to answer the request, maintain support history and diagnose recurring compatibility issues, subject to applicable law.
 
 ## Third-party software
 
