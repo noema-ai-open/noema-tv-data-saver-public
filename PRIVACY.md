@@ -38,9 +38,9 @@ This local processing can handle personal or sensitive content carried by other 
 
 ## Installed apps
 
-The app does not read, list, store or transmit the list of apps installed on the TV. It does not request the `QUERY_ALL_PACKAGES` permission, usage access or accessibility access, and it does not upload any app inventory to NOEMA AI or to anyone else.
+The app does not enumerate the TV's installed apps or build a complete app inventory. It does not request the `QUERY_ALL_PACKAGES` permission, usage access or accessibility access, and it does not upload any app inventory to NOEMA AI or to anyone else.
 
-Starting with version 1.2.12, the app checks only whether the following fixed Google system packages are present, so that Android can exclude them from the local VPN path: `com.google.android.gms`, `com.google.android.gsf`, `com.android.vending`, `com.google.android.googlequicksearchbox`, `com.google.android.katniss`, `com.google.android.tvlauncher`, `com.google.android.leanbacklauncher`, `com.google.android.apps.tv.launcherx` and `com.google.android.tvrecommendations`. These packages are declared in the app manifest. The check happens on the device and its result is not stored or transmitted.
+Starting with version 1.2.12, the app checks only whether the following fixed Google system packages are present, so that Android can exclude them from the local VPN path: `com.google.android.gms`, `com.google.android.gsf`, `com.android.vending`, `com.google.android.googlequicksearchbox`, `com.google.android.katniss`, `com.google.android.tvlauncher`, `com.google.android.leanbacklauncher`, `com.google.android.apps.tv.launcherx` and `com.google.android.tvrecommendations`. These packages are declared in the app manifest. The check happens on the device. Names of Google system packages successfully excluded from the VPN are written to Android's local system log for troubleshooting. Android controls log retention. The app does not automatically transmit these results or include this package-name log in its built-in support report.
 
 ## DNS
 
