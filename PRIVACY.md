@@ -1,6 +1,6 @@
 # Privacy Policy / Datenschutzerklärung — Android TV Data Saver
 
-Effective date: 16 October 2026
+Effective date: 19 October 2026
 
 Android TV Data Saver (NOEMA AI) is designed to work locally on the Android TV / Google TV device.
 
@@ -32,7 +32,15 @@ The VPN path handles packets from other apps. IP addresses, transport ports, TCP
 
 While limiting is active, the local relay forwards other apps' network traffic from the app's own process. That traffic can contain identifiers sent by those apps, such as device or advertising IDs. The app does not read, store or use these identifiers; they are only buffered in memory while being forwarded to their original destination. For this reason, the app's Google Play Data safety section lists "Device or other IDs" as collected, processed ephemerally, not shared, and used only for app functionality.
 
+Starting with version 1.2.12, Google system components are excluded from the local VPN path and use the normal network directly: Google Play services, the Google Play Store, the Google app / Google TV voice search and the Android TV / Google TV home screen components (package names listed under "Installed apps"). Their traffic is not forwarded, limited or buffered by this app. Other apps, for example streaming apps, continue to pass through the local relay while limiting is active.
+
 This local processing can handle personal or sensitive content carried by other apps' traffic, including encrypted bytes. NOEMA AI does not receive that content. Original connections still leave the device for the internet services selected by those apps; local VPN processing is not an offline mode. There is no additional remote VPN tunnel, remote private network service or geographic VPN endpoint. The app does not add a separate layer of encryption to the original connections; encryption remains that of the originating app/protocol, such as HTTPS/TLS.
+
+## Installed apps
+
+The app does not read, list, store or transmit the list of apps installed on the TV. It does not request the `QUERY_ALL_PACKAGES` permission, usage access or accessibility access, and it does not upload any app inventory to NOEMA AI or to anyone else.
+
+Starting with version 1.2.12, the app checks only whether the following fixed Google system packages are present, so that Android can exclude them from the local VPN path: `com.google.android.gms`, `com.google.android.gsf`, `com.android.vending`, `com.google.android.googlequicksearchbox`, `com.google.android.katniss`, `com.google.android.tvlauncher`, `com.google.android.leanbacklauncher`, `com.google.android.apps.tv.launcherx` and `com.google.android.tvrecommendations`. These packages are declared in the app manifest. The check happens on the device and its result is not stored or transmitted.
 
 ## DNS
 
@@ -84,10 +92,12 @@ The app is a networking utility and is not directed specifically at children. It
 
 If the app's data handling or use of `VpnService` changes, this privacy policy will be updated before the changed behavior is released.
 
+- Version 1.2.12: Google system components are excluded from the local VPN path; added the "Installed apps" section.
+
 ## Contact
 
 Support: `support@noema-ai.de`
 
 Website: https://noema-ai.de
 
-Project: https://github.com/noema-ai-open/noema-tv-speed-limiter-for-AndroidTV
+Project: https://github.com/noema-ai-open/noema-tv-data-saver-public
